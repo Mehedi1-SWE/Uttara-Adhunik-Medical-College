@@ -5,7 +5,7 @@ export default function Navbar() {
     return (
         <header className="relative mx-auto h-[164.22515869140625px] w-[1600px] shrink-0 rotate-0 opacity-100">
             {/* Upper layout */}
-            <div className="box-border flex h-[58px] w-[1600px] items-center gap-[10px] bg-[#FCFBFB] px-[80px] rotate-0 opacity-100">
+            <div className="box-border flex h-[58px] w-[1600px] items-center gap-[10px] border-b-[0.5px] border-dashed border-[#44444433] bg-[#FCFBFB] px-[80px] rotate-0 opacity-100">
                 <div className="flex h-[38px] w-[1440px] shrink-0 items-center justify-between rotate-0 opacity-100">
                     {/* Upper left layout */}
                     <div className="flex h-[30px] w-[720px] shrink-0 items-center gap-[20px] rotate-0 opacity-100">
@@ -14,6 +14,7 @@ export default function Navbar() {
                             <span className="relative block h-[20px] w-[20px] shrink-0">
                                 <Image src="/map-pin.png" alt="" width={20} height={20} className="h-[20px] w-[20px] object-contain" />
                             </span>
+
                             <span className="flex h-[30px] w-[235px] shrink-0 flex-col justify-center font-[family-name:var(--font-inter)] text-[12px] leading-[100%] font-medium tracking-[0px] text-[#00000080]">
                                 <span className="whitespace-nowrap">House - 34, Road - 4, Sector - 9,</span>
                                 <span className="whitespace-nowrap">Sonargaon Janapath, Uttara Model Town</span>
@@ -25,6 +26,7 @@ export default function Navbar() {
                             <span className="relative block h-[20px] w-[20px] shrink-0">
                                 <Image src="/mail.png" alt="" width={20} height={20} className="h-[20px] w-[20px] object-contain" />
                             </span>
+
                             <a href="mailto:info@uamc.com" className="flex h-[15px] w-[93px] shrink-0 items-center whitespace-nowrap font-[family-name:var(--font-inter)] text-[12px] leading-[100%] font-medium tracking-[0px] text-[#00000080]">info@uamc.com</a>
                         </div>
 
@@ -33,12 +35,13 @@ export default function Navbar() {
                             <span className="relative block h-[20px] w-[20px] shrink-0">
                                 <Image src="/phone.png" alt="" width={20} height={20} className="h-[20px] w-[20px] object-contain" />
                             </span>
-                            <a href="tel:+8801700220000" className="flex h-[15px] w-[113px] shrink-0 items-center whitespace-nowrap font-[family-name:var(--font-inter)] text-[12px] leading-[100%] font-medium tracking-[0px] text-[#00000080]">+880 1700-220000</a>
+
+                            <a href="tel:+8801700220000" className="flex h-[15px] w-[133px] shrink-0 items-center whitespace-nowrap font-[family-name:var(--font-inter)] text-[12px] leading-[100%] font-medium tracking-[0px] text-[#00000080]">+880 1700-220000</a>
                         </div>
                     </div>
 
                     {/* Upper right layout */}
-                    <div className="flex h-[38px] w-[720px] shrink-0 gap-[10px] rotate-0 opacity-100">
+                    <div className="flex h-[38px] w-[720px] shrink-0 justify-end gap-[10px] rotate-0 opacity-100">
                         {/* Student Portal */}
                         <Link href="/student-portal" className="box-border flex h-[38px] w-[134px] shrink-0 cursor-pointer items-center gap-[10px] rounded-[5px] px-[15px] py-[10px] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#444444]">
                             <span className="flex h-[18px] w-[104px] shrink-0 items-center whitespace-nowrap font-[family-name:var(--font-inter)] text-[15px] leading-[100%] font-medium tracking-[0px] text-[#444444]">Student Portal</span>
@@ -77,6 +80,7 @@ export default function Navbar() {
                     {/* Logo and college name */}
                     <div className="flex h-[66.22516632080078px] w-[249.50331115722656px] shrink-0 items-center gap-[8.28px] rotate-0 opacity-100">
                         <Image src="/UAMC Icon.png" alt="Uttara Adhunik Medical College logo" width={66.22516632080078} height={66.22516632080078} className="h-[66.22516632080078px] w-[66.22516632080078px] shrink-0 object-contain rotate-0 opacity-100" />
+
                         <div className="flex h-[42px] w-[175px] shrink-0 flex-col justify-center text-black rotate-0 opacity-100">
                             <span className="whitespace-nowrap font-[family-name:var(--font-bitter)] text-[20.7px] leading-[100%] font-bold tracking-[0px]">Uttara Adhunik</span>
                             <span className="whitespace-nowrap font-[family-name:var(--font-inter)] text-[14.9px] leading-[100%] font-medium tracking-[0px]">Medical College (UAMC)</span>
@@ -105,19 +109,19 @@ export default function Navbar() {
                     {/* About UAMC */}
                     <button type="button" aria-haspopup="dialog" className="box-border flex h-[44px] w-[154px] shrink-0 cursor-pointer items-center gap-[10px] p-[10px] rotate-0 opacity-100">
                         <span className="flex h-[18px] w-[100px] shrink-0 items-center whitespace-nowrap font-[family-name:var(--font-bitter)] text-[15px] leading-[100%] font-normal tracking-[0.02em] text-black uppercase">About UAMC</span>
-                        <span aria-hidden="true" className="block h-[24px] w-[24px] shrink-0 rotate-0 opacity-100">{/* Chevron-down icon */}</span>
+                        <span aria-hidden="true" className="relative block h-[24px] w-[24px] shrink-0 rotate-0 opacity-100"><span className="absolute left-[7px] top-[5px] h-[7px] w-[7px] rotate-45 border-b border-r border-black" /></span>
                     </button>
 
                     {/* Facilities */}
                     <button type="button" aria-haspopup="dialog" className="box-border flex h-[44px] w-[135px] shrink-0 cursor-pointer items-center gap-[10px] p-[10px] rotate-0 opacity-100">
                         <span className="flex h-[18px] w-[81px] shrink-0 items-center whitespace-nowrap font-[family-name:var(--font-bitter)] text-[15px] leading-[100%] font-normal tracking-[0.02em] text-black uppercase">FACILITIES</span>
-                        <span aria-hidden="true" className="block h-[24px] w-[24px] shrink-0 rotate-0 opacity-100">{/* Chevron-down icon */}</span>
+                        <span aria-hidden="true" className="relative block h-[24px] w-[24px] shrink-0 rotate-0 opacity-100"><span className="absolute left-[7px] top-[5px] h-[7px] w-[7px] rotate-45 border-b border-r border-black" /></span>
                     </button>
 
                     {/* Admission */}
-                    <div className="flex items-center">
+                    <div className="box-border flex h-[44px] w-[142px] shrink-0 items-center gap-[10px] p-[10px] rotate-0 opacity-100">
                         <span className="flex h-[18px] w-[88px] shrink-0 items-center whitespace-nowrap font-[family-name:var(--font-bitter)] text-[15px] leading-[100%] font-normal tracking-[0.02em] text-black uppercase">ADMISSION</span>
-                        <span aria-hidden="true" className="block h-[24px] w-[24px] shrink-0 rotate-0 opacity-100">{/* Chevron-down icon */}</span>
+                        <span aria-hidden="true" className="relative block h-[24px] w-[24px] shrink-0 rotate-0 opacity-100"><span className="absolute left-[7px] top-[5px] h-[7px] w-[7px] rotate-45 border-b border-r border-black" /></span>
                     </div>
 
                     {/* Notice & Media */}
@@ -132,7 +136,7 @@ export default function Navbar() {
                 </div>
 
                 {/* Third layout: Vertical divider */}
-                <div aria-hidden="true" className="h-0 w-[20px] shrink-0 -rotate-90 border-t border-solid border-[#444444] opacity-100" />
+                <div aria-hidden="true" className="h-[20px] w-0 shrink-0 self-center border-l border-solid border-[#444444] opacity-100" />
 
                 {/* Fourth layout: Search and menu icons */}
                 <div className="flex h-[24px] w-[68px] shrink-0 gap-[20px] rotate-0 opacity-100">
@@ -140,7 +144,6 @@ export default function Navbar() {
                     <Image src="/align-right.png" alt="Menu" width={24} height={24} className="h-[24px] w-[24px] shrink-0 object-contain rotate-0 opacity-100" />
                 </div>
             </div>
-
         </header>
     );
 }

@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Inter, Bitter } from "next/font/google";
+import { Geist, Geist_Mono, Inter, Bitter, Rancho } from "next/font/google";
 import Navbar from "@/components/shared/Navbar";
 import "./globals.css";
 
@@ -15,13 +15,19 @@ const geistMono = Geist_Mono({
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["500"],
+  weight: ["400", "500"],
 });
 
 const bitter = Bitter({
   variable: "--font-bitter",
   subsets: ["latin"],
   weight: ["400", "700"],
+});
+
+const rancho = Rancho({
+  variable: "--font-rancho",
+  subsets: ["latin"],
+  weight: ["400"],
 });
 
 export const metadata = {
@@ -31,7 +37,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${bitter.variable} h-full antialiased`}>
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${bitter.variable} ${rancho.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
         <Navbar />
         {children}

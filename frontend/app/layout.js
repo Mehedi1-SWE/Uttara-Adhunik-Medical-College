@@ -1,3 +1,4 @@
+
 import { Geist, Geist_Mono, Inter, Bitter, Rancho } from "next/font/google";
 import Navbar from "@/components/shared/Navbar";
 import "./globals.css";
@@ -15,13 +16,13 @@ const geistMono = Geist_Mono({
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["400", "500"],
+  weight: ["400", "500", "600", "700"],
 });
 
 const bitter = Bitter({
   variable: "--font-bitter",
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["300", "400", "700"],
 });
 
 const rancho = Rancho({
@@ -38,7 +39,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${bitter.variable} ${rancho.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col" suppressHydrationWarning>
         <Navbar />
         {children}
       </body>
